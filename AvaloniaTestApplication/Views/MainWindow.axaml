@@ -1,0 +1,54 @@
+<Window
+    x:Class="AvaloniaTestApplication.Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:AvaloniaTestApplication.ViewModels"
+	xmlns:local="using:AvaloniaTestApplication.Views"
+    Title="AvaloniaTestApplication"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Icon="/Assets/avalonia-logo.ico"
+	ExtendClientAreaToDecorationsHint="True"
+	TransparencyLevelHint="Mica"
+	Background="Transparent"
+    mc:Ignorable="d">
+
+    <Window.DataTemplates>
+        <DataTemplate DataType="{x:Type vm:SampleViewModel}">
+			<local:SampleView/>
+        </DataTemplate>
+    </Window.DataTemplates>
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <Grid>
+		<ExperimentalAcrylicBorder IsHitTestVisible="False">
+			<ExperimentalAcrylicBorder.Material>
+				<ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="Black"
+                    TintOpacity="1"
+                    MaterialOpacity="0.65" />
+			</ExperimentalAcrylicBorder.Material>
+		</ExperimentalAcrylicBorder>
+		
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock
+                Margin="0 0 0 8"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Text="{Binding Greeting}" />
+            <Button
+                Margin="0 0 0 8"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Click me" />
+            <TextBox Margin="0 0 0 8" Watermark="Helper text" />
+            <ListBox Items="{Binding Samples}" />
+        </StackPanel>
+    </Grid>
+</Window>
