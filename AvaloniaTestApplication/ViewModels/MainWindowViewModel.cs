@@ -1,13 +1,12 @@
-using System;
-using System.Collections.Generic;
+using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
-using System.Text;
 
 namespace AvaloniaTestApplication.ViewModels
 {
-    public class MainWindowViewModel : ViewModelBase
+    public partial class MainWindowViewModel : ViewModelBase
     {
-        public string Greeting => "Welcome to Avalonia!";
+        [ObservableProperty]
+        private string _greeting = "Welcome to Avalonia!";
 
         public ObservableCollection<SampleViewModel> Samples { get; } = new ObservableCollection<SampleViewModel>();
 

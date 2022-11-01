@@ -1,6 +1,4 @@
 using Avalonia;
-using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.ReactiveUI;
 using System;
 
 namespace AvaloniaTestApplication
@@ -18,7 +16,6 @@ namespace AvaloniaTestApplication
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToTrace()
-                .UseReactiveUI();
+                .LogToTrace();
     }
 }

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace AvaloniaTestApplication.ViewModels
 {
-    public class SampleViewModel : ViewModelBase
+    public partial class SampleViewModel : ViewModelBase
     {
-        public string Title { get; set; }
+        [ObservableProperty]
+        private string _title;
     }
 }
