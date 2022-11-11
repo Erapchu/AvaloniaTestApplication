@@ -44,6 +44,7 @@
                 Text="{Binding Greeting}" />
             <Button
                 Margin="0 0 0 8"
+				Command="{Binding ClickMeCommand}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Content="Click me" />

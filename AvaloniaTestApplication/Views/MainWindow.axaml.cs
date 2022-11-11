@@ -9,7 +9,7 @@ namespace AvaloniaTestApplication.Views
 
         public MainWindow()
         {
-
+            InitializeComponent();
         }
 
         public MainWindow(MainWindowViewModel viewModel)
