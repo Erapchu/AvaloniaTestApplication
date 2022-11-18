@@ -3,21 +3,21 @@
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:AvaloniaTestApplication.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:AvaloniaTestApplication.ViewModels"
-	xmlns:local="using:AvaloniaTestApplication.Views"
     Title="AvaloniaTestApplication"
     d:DesignHeight="450"
     d:DesignWidth="800"
+    Background="Transparent"
+    ExtendClientAreaToDecorationsHint="True"
     Icon="/Assets/avalonia-logo.ico"
-	ExtendClientAreaToDecorationsHint="True"
-	TransparencyLevelHint="Mica"
-	Background="Transparent"
+    TransparencyLevelHint="Mica"
     mc:Ignorable="d">
 
     <Window.DataTemplates>
         <DataTemplate DataType="{x:Type vm:SampleViewModel}">
-			<local:SampleView/>
+            <local:SampleView />
         </DataTemplate>
     </Window.DataTemplates>
 
@@ -26,16 +26,16 @@
     </Design.DataContext>
 
     <Grid>
-		<ExperimentalAcrylicBorder IsHitTestVisible="False">
-			<ExperimentalAcrylicBorder.Material>
-				<ExperimentalAcrylicMaterial
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
                     BackgroundSource="Digger"
+                    MaterialOpacity="0.65"
                     TintColor="Black"
-                    TintOpacity="1"
-                    MaterialOpacity="0.65" />
-			</ExperimentalAcrylicBorder.Material>
-		</ExperimentalAcrylicBorder>
-		
+                    TintOpacity="1" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock
                 Margin="0 0 0 8"
@@ -44,9 +44,9 @@
                 Text="{Binding Greeting}" />
             <Button
                 Margin="0 0 0 8"
-				Command="{Binding ClickMeCommand}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
+                Command="{Binding ClickMeCommand}"
                 Content="Click me" />
             <TextBox Margin="0 0 0 8" Watermark="Helper text" />
             <ListBox Items="{Binding Samples}" />
