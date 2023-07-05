@@ -2,12 +2,10 @@
     x:Class="AvaloniaTestApplication.App"
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:fluent="using:Avalonia.Themes.Fluent"
+    xmlns:simple="using:Avalonia.Themes.Simple"
     xmlns:local="using:AvaloniaTestApplication">
-    <Application.DataTemplates>
-        <local:ViewLocator />
-    </Application.DataTemplates>
-
     <Application.Styles>
-        <FluentTheme Mode="Dark" />
+        <FluentTheme />
     </Application.Styles>
 </Application>
